@@ -1,8 +1,8 @@
 package com.bv.repositoryapp.service;
 
 import com.bv.repositoryapp.converter.ComputationResultEntityToComputationResultConverter;
-import com.bv.repositoryapp.exception.ComputationResultNotFoundException;
-import com.bv.repositoryapp.model.dto.ComputationResult;
+import com.bv.repositoryapp.error.ComputationResultNotFoundException;
+import com.bv.repositoryapp.model.ComputationResult;
 import com.bv.repositoryapp.model.entity.ComputationResultEntity;
 import com.bv.repositoryapp.repository.ComputationResultRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class ComputationHistoryServiceImpl implements  ComputationHistoryService {
+public class ComputationHistoryServiceImpl implements ComputationHistoryService {
 
     private final ComputationResultRepository computationResultRepository;
     private final ComputationResultEntityToComputationResultConverter converter;

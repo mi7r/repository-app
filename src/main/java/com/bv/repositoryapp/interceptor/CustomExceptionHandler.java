@@ -1,5 +1,6 @@
-package com.bv.repositoryapp.exception;
+package com.bv.repositoryapp.interceptor;
 
+import com.bv.repositoryapp.error.ComputationResultNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.JDBCConnectionException;
 import org.springframework.http.HttpStatus;
@@ -15,7 +16,6 @@ public class CustomExceptionHandler {
     private static final String INTERNAL_ERROR = "INTERNAL_ERROR";
     private static final String COMPUTATION_RESULT_NOT_FOUND_ERROR_MESSAGE = "Computation result not found. Error message: {}";
     private static final String JDBC_CONNECTION_ERROR_MESSAGE = "JDBC connection error. Error message: {}";
-
 
     @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = NOT_FOUND)
     @ExceptionHandler(ComputationResultNotFoundException.class)

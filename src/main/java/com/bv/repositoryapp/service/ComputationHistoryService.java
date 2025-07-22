@@ -1,6 +1,6 @@
 package com.bv.repositoryapp.service;
 
-import com.bv.repositoryapp.model.dto.ComputationResult;
+import com.bv.repositoryapp.model.ComputationResult;
 
 import java.util.List;
 

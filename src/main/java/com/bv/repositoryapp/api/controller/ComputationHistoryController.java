@@ -1,7 +1,6 @@
 package com.bv.repositoryapp.api.controller;
 
-import com.bv.repositoryapp.model.dto.ComputationResult;
-import com.bv.repositoryapp.repository.ComputationResultRepository;
+import com.bv.repositoryapp.model.ComputationResult;
 import com.bv.repositoryapp.service.ComputationHistoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

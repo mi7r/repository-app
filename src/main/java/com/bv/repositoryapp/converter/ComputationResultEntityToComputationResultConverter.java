@@ -1,6 +1,6 @@
 package com.bv.repositoryapp.converter;
 
-import com.bv.repositoryapp.model.dto.ComputationResult;
+import com.bv.repositoryapp.model.ComputationResult;
 import com.bv.repositoryapp.model.entity.ComputationResultEntity;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

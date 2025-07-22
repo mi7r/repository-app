@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: repository-app
+    datasource:
+        url: jdbc:postgresql://localhost:5432/computation_result
+        username: bvuser
+        password: bvsecret
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create-drop
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+server:
+    port: 8091

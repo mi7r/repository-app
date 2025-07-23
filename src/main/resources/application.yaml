@@ -26,3 +26,5 @@ external:
     services:
         kafka:
             topic: words.processed
+            concurrent-listeners-amount: 4
+            processing-threads-amount: 12

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -18,6 +19,7 @@ public class ComputationListenerServiceImpl implements ComputationListenerServic
     private final ComputationResultRepository computationResultRepository;
 
     @Override
+    @Transactional
     public void processComputationResult(final String computationResult) throws JsonProcessingException {
         ComputationResult result = objectMapper.readValue(computationResult, ComputationResult.class);
 
@@ -28,6 +30,6 @@ public class ComputationListenerServiceImpl implements ComputationListenerServic
             .totalProcessingTime(result.totalProcessingTime())
             .build());
 
-        log.info("ComputationResul saved in Database.");
+        log.info("ComputationResult saved in Database.");
     }
 }
